@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('jvdevs-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <title>JVDevs | Soluciones Tecnológicas a la Medida</title>
+  <meta name="description" content="JVDevs desarrolla plataformas web, software de gestión y automatizaciones a la medida de tu negocio. Solicita tu cotización sin compromiso.">
+  <meta property="og:title" content="JVDevs | Soluciones Tecnológicas a la Medida">
+  <meta property="og:description" content="Plataformas digitales, software de gestión y automatizaciones diseñadas para optimizar procesos, captar clientes y escalar tu negocio.">
+  <meta property="og:image" content="assets/images/logo-3d.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header header--floating" id="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo-3d.png" alt="Logo de JVDevs">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><button class="theme-toggle" id="theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-carousel">
+      <div class="carousel" id="hero-carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="assets/images/hero-1.jpg" alt="Desarrollo de software JVDevs">
+            <div class="carousel-overlay">
+              <span class="hero-eyebrow">JVDevs · Desarrollo de Software</span>
+              <h1>Soluciones Tecnológicas a la <span class="accent">Medida</span> de Tu Negocio</h1>
+              <p>Construimos plataformas digitales, software de gestión y automatizaciones diseñadas para optimizar procesos y escalar operaciones.</p>
+              <a href="contacto.html" class="btn-primary">Solicitar cotización</a>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/hero-2.jpg" alt="Equipo de tecnología JVDevs">
+            <div class="carousel-overlay">
+              <span class="hero-eyebrow">Desarrollo Web</span>
+              <h1>Desarrollo Web de <span class="accent">Alto Rendimiento</span></h1>
+              <p>Sitios corporativos y aplicaciones web rápidas, seguras y adaptadas a cualquier dispositivo para proyectar tu marca.</p>
+              <a href="servicios.html" class="btn-primary">Explorar servicios web</a>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/hero-3.jpg" alt="Soluciones digitales JVDevs">
+            <div class="carousel-overlay">
+              <span class="hero-eyebrow">Software Administrativo</span>
+              <h1>Sistemas de <span class="accent">Gestión</span> y Automatización</h1>
+              <p>Simplifica el control de tu empresa con herramientas personalizadas que ahorran tiempo y eliminan tareas manuales.</p>
+              <a href="contacto.html" class="btn-primary">Hablemos de tu proyecto</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-arrow prev" aria-label="Imagen anterior">&#10094;</button>
+        <button class="carousel-arrow next" aria-label="Imagen siguiente">&#10095;</button>
+
+        <div class="carousel-dots">
+          <button class="dot active" data-index="0" aria-label="Ir a imagen 1"></button>
+          <button class="dot" data-index="1" aria-label="Ir a imagen 2"></button>
+          <button class="dot" data-index="2" aria-label="Ir a imagen 3"></button>
+        </div>
+      </div>
+    </section>
+    <div class="circuit-divider"></div>
+
+    <section class="about-section">
+      <div class="about-header">
+        <div class="about-text">
+          <span class="hero-eyebrow">Quiénes Somos</span>
+          <h2>Una empresa nueva, con resultados reales</h2>
+          <p>En JVDevs diseñamos y desarrollamos software a la medida enfocado en optimizar operaciones y potenciar la presencia digital de los negocios. Combinamos arquitectura moderna, código limpio y diseño centrado en el usuario para entregar soluciones digitales escalables y de alto rendimiento.</p>
+        </div>
+        <div class="about-logo-wrap">
+          <img src="assets/images/robot-coding.png" alt="JVDevs desarrollando software" class="about-logo-float">
+        </div>
+      </div>
+
+      <div class="why-us-heading">
+        <h3>¿Por Qué Trabajar con Nosotros?</h3>
+      </div>
+
+      <div class="mission-vision-grid why-us-grid">
+        <div class="mv-card">
+          <span class="mv-tag">Soluciones a la Medida</span>
+          <p>Desarrollo adaptado 100% a los flujos operativos de tu negocio.</p>
+        </div>
+        <div class="mv-card">
+          <span class="mv-tag">Rendimiento y Escalabilidad</span>
+          <p>Código optimizado con tiempos de carga rápidos y arquitectura sólida.</p>
+        </div>
+        <div class="mv-card">
+          <span class="mv-tag">Acompañamiento Cercano</span>
+          <p>Comunicación directa y soporte técnico continuo durante y después del lanzamiento.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="circuit-divider"></div>
+
+    <section class="clients-section">
+      <span class="client-label">Confían en Nosotros</span>
+      <a href="https://proservicesrrhh.com" target="_blank" rel="noopener noreferrer" class="client-logo-link">
+        <img src="assets/images/cliente-proservices.png" alt="Pro Services RRHH, cliente de JVDevs" class="client-logo client-logo-light">
+        <img src="assets/images/cliente-proservices-dark.png" alt="Pro Services RRHH, cliente de JVDevs" class="client-logo client-logo-dark">
+      </a>
+      <p class="client-subtitle">Impulsando la transformación digital de nuestros aliados estratégicos.</p>
+    </section>
+
+    <div class="circuit-divider"></div>
+
+    <section class="section-heading">
+      <span class="hero-eyebrow">Lo que Hacemos</span>
+      <h2>Servicios Destacados</h2>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>Desarrollo Web</h3>
+        <p>Sitios corporativos y catálogos interactivos, rápidos y adaptados a cualquier dispositivo.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Software a Medida</h3>
+        <p>Sistemas de gestión y automatizaciones que se adaptan a tus procesos operativos.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Soporte Continuo</h3>
+        <p>Mantenimiento, respaldo de datos y actualizaciones para que tu plataforma nunca se detenga.</p>
+      </div>
+    </section>
+
+    <div class="features-cta">
+      <a href="servicios.html" class="cta-robot-link" aria-label="Ver todos los servicios">
+        <img src="assets/images/robot-search.png" alt="Robot JVDevs con lupa" class="cta-robot">
+      </a>
+      <a href="servicios.html" class="btn-secondary">Ver todos los servicios</a>
+    </div>
+
+    <div class="circuit-divider"></div>
+
+    <section class="section-heading">
+      <span class="hero-eyebrow">Metodología</span>
+      <h2>Nuestro Proceso de Trabajo</h2>
+    </section>
+
+    <section class="process-steps">
+      <div class="process-step">
+        <span class="process-number">1</span>
+        <h3>Análisis</h3>
+        <p>Diagnóstico de necesidades y alcance del proyecto.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">2</span>
+        <h3>Diseño y Arquitectura</h3>
+        <p>Estructura de la interfaz y base de datos.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">3</span>
+        <h3>Desarrollo</h3>
+        <p>Código limpio, pruebas e integración tecnológica.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">4</span>
+        <h3>Despliegue y Soporte</h3>
+        <p>Puesta en producción y acompañamiento continuo.</p>
+      </div>
+    </section>
+
+    <div class="circuit-divider"></div>
+
+    <section class="section-heading">
+      <span class="hero-eyebrow">Stack Tecnológico</span>
+      <h2>Con Qué Trabajamos</h2>
+    </section>
+
+    <section class="tech-stack">
+      <div class="tech-chip">
+        <span class="tech-icon">JS</span> JavaScript
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">⬡</span> Node.js
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">⇄</span> Express
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">🗄</span> MySQL
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">⚡</span> Supabase
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">◈</span> Git
+      </div>
+      <div class="tech-chip">
+        <span class="tech-icon">▲</span> Vercel
+      </div>
+    </section>
+
+    <div class="circuit-divider"></div>
+
+    <section class="section-heading">
+      <span class="hero-eyebrow">Dudas Comunes</span>
+      <h2>Preguntas Frecuentes</h2>
+    </section>
+
+    <section class="faq-section">
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo toma el desarrollo de una plataforma o sitio web?</summary>
+        <p>El tiempo varía según la complejidad del proyecto. Un sitio web corporativo puede estar listo en 1-2 semanas, mientras que un sistema de gestión a medida puede tomar de 3 a 8 semanas. Al iniciar, te damos un cronograma claro basado en el alcance definido en la etapa de análisis.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿El software incluye mantenimiento o soporte post-entrega?</summary>
+        <p>Sí. Todos nuestros paquetes incluyen mantenimiento técnico, corrección de errores y respaldo periódico de información. También ofrecemos planes de soporte continuo para actualizaciones y nuevas funciones a futuro.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se maneja el código fuente y el dominio del proyecto?</summary>
+        <p>El código fuente y el dominio quedan a nombre de tu empresa — tú eres el dueño del proyecto. Nosotros nos encargamos de la configuración inicial y te acompañamos en la gestión de renovaciones mientras lo necesites.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 JVDevs. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/components/menu.js"></script>
+</body>
+</html>

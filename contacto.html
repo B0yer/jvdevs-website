@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('jvdevs-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <title>Contacto | JVDevs</title>
+  <meta name="description" content="Contáctanos y cuéntanos qué necesitas. Te responderemos a la brevedad para ayudarte a construir tu solución digital.">
+  <meta property="og:title" content="Contacto | JVDevs">
+  <meta property="og:description" content="Escríbenos y comienza tu proyecto de desarrollo de software a la medida.">
+  <meta property="og:image" content="assets/images/logo-3d.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo-3d.png" alt="Logo de JVDevs">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><button class="theme-toggle" id="theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="page-title-inner">
+        <h1>Hablemos de tu Proyecto</h1>
+        <p>Cuéntanos qué necesitas y te responderemos a la brevedad.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/jvdevs@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde JVDevs.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 JVDevs. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/components/menu.js"></script>
+</body>
+</html>
