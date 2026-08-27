@@ -85,4 +85,44 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll);
     onScroll();
   }
+
+  // ===== Animación al hacer scroll (reveal) =====
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('in-view'));
+  }
+
+  // ===== Pestañas de paquetes (servicios.html) =====
+  const packageButtons = document.querySelectorAll('.package-btn');
+
+  if (packageButtons.length) {
+    packageButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.package;
+
+        packageButtons.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        document.querySelectorAll('.package-panel').forEach((panel) => {
+          panel.classList.toggle('active', panel.id === `package-${target}`);
+        });
+      });
+    });
+  }
 });
